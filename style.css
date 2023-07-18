@@ -1,0 +1,15 @@
+body{
+     background-color: darkslateblue;
+     
+}
+#canvas-container{
+    display:flex;
+}
+canvas{
+    background-color: gray;
+    width: 75%;
+    height: 750px;
+}
+#item-container{
+    width:25%;
+}
