@@ -2,6 +2,8 @@ const gameArea = document.querySelector('#game-area')
 // console.log(gameArea)
 const hero = document.querySelector('#hero')
 console.log(hero)
+const mob = document.querySelector('#mob')
+
 class Character{
     constructor(health, damage, item=[]){
         this.health = health;
@@ -12,7 +14,7 @@ class Character{
 
 
 class Hero extends Character{
-    constructor(health,damage,item =[],width, height,color, x, y,type){
+    constructor(health= ['💎'],damage,item =[],width, height,color, x, y,type){
         super(health, damage, item=[])
         this.health = health;
         this.damage = damage;
@@ -33,6 +35,7 @@ class Hero extends Character{
     }
     attack(){
         console.log(`**Swings Sword***`)
+        this.health.pop()
     }
 }
 
@@ -45,7 +48,9 @@ class Mob extends Character{
     }
 }
 
-const Johnny = new Hero(100, 5, [],1,1,"red", 1,1)
+const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
+console.log(Johnny.attack())
+console.log(Johnny)
 
 function startGame(){
     start: function start(){
@@ -53,21 +58,39 @@ function startGame(){
      console.log("start")
     }
 }
-let side = 0;
-
+let horizontal = 0;
+let vertical = 0;
 document.addEventListener('keydown', function(e){
 if(e.key === 'a'){
    console.log(e)
-   side-=2
-   hero.style.left= side + "px"
-   
+   horizontal-=2
+   hero.style.left= horizontal + "px"
+   console.log(horizontal)
 }
 })
 
 document.addEventListener('keydown',function(e){
     if(e.key === 'd'){
         console.log(e)
-        side+=2
-        hero.style.left = side + 'px'
+        horizontal+=2
+        hero.style.left = horizontal + 'px'
+        console.log(horizontal)
+    }
+})
+document.addEventListener('keydown',function(e){
+    if(e.key === 'w'){
+        console.log(e)
+        vertical-=2
+        hero.style.top = vertical+ 'px'
+        console.log(vertical)
+    }
+})
+
+document.addEventListener('keydown',function(e){
+    if(e.key === 's'){
+        console.log(e)
+        vertical+=2
+        hero.style.top = vertical+ 'px'
+        console.log(vertical)
     }
 })

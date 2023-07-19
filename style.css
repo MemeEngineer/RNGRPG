@@ -24,3 +24,15 @@ div#hero{
     position:absolute;
     z-index: 1;
 }
+
+div#mob{
+    width: 10px;
+    height:10px;
+    background-color: blue;
+    position: absolute;
+    z-index: 1;
+    top:100px;
+    left: 100px;
+    right:100px;
+    
+}
