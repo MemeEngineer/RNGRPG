@@ -1,5 +1,19 @@
+// Selecting the Canvas element by id
 const gameArea = document.querySelector('#game-area')
-// console.log(gameArea)
+//initializing the canvas element with a 2d property
+const ctx = gameArea.getContext('2d');
+console.log(gameArea)
+// width and height properties
+gameArea.width = 550;
+gameArea.height = 600;
+
+function gameLoop(){
+    ctx.fillStyle = "gray";
+    ctx.fillRect(0,0,gameArea.width, gameArea.height)
+}
+
+setInterval(gameLoop, 1000 /60)
+
 const hero = document.querySelector('#hero')
 console.log(hero)
 const mob = document.querySelector('#mob')
@@ -52,12 +66,12 @@ const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 
 console.log(Johnny.attack())
 console.log(Johnny)
 
-function startGame(){
-    start: function start(){
-     const Johnny = new Hero(100, 5, [],1,1,"red", 1,1)
-     console.log("start")
-    }
-}
+// function startGame(){
+//     start: function start(){
+//      const Johnny = new Hero(100, 5, [],1,1,"red", 1,1)
+//      console.log("start")
+//     }
+// }
 let horizontal = 0;
 let vertical = 0;
 document.addEventListener('keydown', function(e){
