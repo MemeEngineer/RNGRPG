@@ -10,8 +10,11 @@ export default class Bullet{
     }
 
     draw(ctx){
+        //makes color of the bullet
         ctx.fillStyle = this.color;
+        // placement of the bullet
         this.y -= this.speed;
+        //dimensional properties of the bullet
         ctx.fillRect(this.x,this.y, this.width, this.height)
     }
 }

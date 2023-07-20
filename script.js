@@ -10,7 +10,7 @@ console.log(gameArea)
 gameArea.width = 550;
 gameArea.height = 600;
 
-
+//instance of the bulletcontroller
 const bulletController = new BulletController(gameArea);
 //instance of the hero
 const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController )
