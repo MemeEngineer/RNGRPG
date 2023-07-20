@@ -6,8 +6,26 @@ body{
      padding:0;
      margin:0;
      height:100vh;
-     background: linear-gradient();
+     background: linear-gradient(
+        0deg,
+        rgb(17,51,161) 0%, 
+        rgb(123,34,195)40%,
+        rgb(200,200,255) 60%
+     );
      
+}
+
+h1{
+    margin: 0px;
+    font-size: 2.9em;
+    color: yellow;
+}
+h2{
+    margin:0px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    color:yellow;
+    font-style: italic;
 }
 /* #canvas-container{
     display:flex;

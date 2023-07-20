@@ -1,3 +1,5 @@
+import Hero from "./hero.js"
+
 // Selecting the Canvas element by id
 const gameArea = document.querySelector('#game-area')
 //initializing the canvas element with a 2d property
@@ -7,64 +9,34 @@ console.log(gameArea)
 gameArea.width = 550;
 gameArea.height = 600;
 
+//instance of the hero
+const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3)
+
 function gameLoop(){
+    //invoking the style properties of the hero with a function
+    setCommonStyle()
+    //setting canvas color to gray
     ctx.fillStyle = "gray";
+    //making the canvas start at 0,0 with the canvas width and height properties
     ctx.fillRect(0,0,gameArea.width, gameArea.height)
+    //drawing the knight instance with the draw method
+    knight.draw(ctx)
 }
 
+// using a windows interal method to call gameloop 60 times per second to fresh game
 setInterval(gameLoop, 1000 /60)
 
-const hero = document.querySelector('#hero')
-console.log(hero)
-const mob = document.querySelector('#mob')
-
-class Character{
-    constructor(health, damage, item=[]){
-        this.health = health;
-        this.damage = damage;
-        this.item = item;
-    }
+//function with properties of the hero shape
+function setCommonStyle(){
+    ctx.shadowColor = '#d53';
+    ctx.shadowBlur = 10;
+    ctx.lineJoin = `bevel`;
+    ctx.lineWidth= 20;
 }
 
-
-class Hero extends Character{
-    constructor(health= ['💎'],damage,item =[],width, height,color, x, y,type){
-        super(health, damage, item=[])
-        this.health = health;
-        this.damage = damage;
-        this.item = item;
-        this.width = width;
-        this.height= height;
-        this.x = x;
-        this.y= y;
-        this.update = function(){
-            ctx=gameArea.context
-            ctx.save()
-            ctx.translate(this.x, this.y)
-            ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
-            ctx.fillStyle= "red";
-            ctx.restore()
-
-        }
-    }
-    attack(){
-        console.log(`**Swings Sword***`)
-        this.health.pop()
-    }
-}
-
-class Mob extends Character{
-    constructor(health, damage, item= []){
-        super(health,damage,item=[])
-        this.health = health;
-        this.damage = damage;
-        this.item = item;
-    }
-}
-
-const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
-console.log(Johnny.attack())
-console.log(Johnny)
+// const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
+// console.log(Johnny.attack())
+// console.log(Johnny)
 
 // function startGame(){
 //     start: function start(){
