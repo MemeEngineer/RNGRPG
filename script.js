@@ -31,7 +31,7 @@ function setCommonStyle(){
     ctx.shadowColor = '#d53';
     ctx.shadowBlur = 10;
     ctx.lineJoin = `bevel`;
-    ctx.lineWidth= 20;
+    ctx.lineWidth= 10;
 }
 
 // const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
@@ -44,39 +44,39 @@ function setCommonStyle(){
 //      console.log("start")
 //     }
 // }
-let horizontal = 0;
-let vertical = 0;
-document.addEventListener('keydown', function(e){
-if(e.key === 'a'){
-   console.log(e)
-   horizontal-=2
-   hero.style.left= horizontal + "px"
-   console.log(horizontal)
-}
-})
+// let horizontal = 0;
+// let vertical = 0;
+// document.addEventListener('keydown', function(e){
+// if(e.key === 'a'){
+//    console.log(e)
+//    horizontal-=2
+//    hero.style.left= horizontal + "px"
+//    console.log(horizontal)
+// }
+// })
 
-document.addEventListener('keydown',function(e){
-    if(e.key === 'd'){
-        console.log(e)
-        horizontal+=2
-        hero.style.left = horizontal + 'px'
-        console.log(horizontal)
-    }
-})
-document.addEventListener('keydown',function(e){
-    if(e.key === 'w'){
-        console.log(e)
-        vertical-=2
-        hero.style.top = vertical+ 'px'
-        console.log(vertical)
-    }
-})
+// document.addEventListener('keydown',function(e){
+//     if(e.key === 'd'){
+//         console.log(e)
+//         horizontal+=2
+//         hero.style.left = horizontal + 'px'
+//         console.log(horizontal)
+//     }
+// })
+// document.addEventListener('keydown',function(e){
+//     if(e.key === 'w'){
+//         console.log(e)
+//         vertical-=2
+//         hero.style.top = vertical+ 'px'
+//         console.log(vertical)
+//     }
+// })
 
-document.addEventListener('keydown',function(e){
-    if(e.key === 's'){
-        console.log(e)
-        vertical+=2
-        hero.style.top = vertical+ 'px'
-        console.log(vertical)
-    }
-})
+// document.addEventListener('keydown',function(e){
+//     if(e.key === 's'){
+//         console.log(e)
+//         vertical+=2
+//         hero.style.top = vertical+ 'px'
+//         console.log(vertical)
+//     }
+// })
