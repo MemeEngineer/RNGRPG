@@ -1,4 +1,5 @@
 import Hero from "./hero.js"
+import BulletController from "./bulletcontroller.js";
 
 // Selecting the Canvas element by id
 const gameArea = document.querySelector('#game-area')
@@ -9,8 +10,10 @@ console.log(gameArea)
 gameArea.width = 550;
 gameArea.height = 600;
 
+
+const bulletController = new BulletController(gameArea);
 //instance of the hero
-const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3)
+const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController )
 
 function gameLoop(){
     //invoking the style properties of the hero with a function
@@ -19,6 +22,8 @@ function gameLoop(){
     ctx.fillStyle = "gray";
     //making the canvas start at 0,0 with the canvas width and height properties
     ctx.fillRect(0,0,gameArea.width, gameArea.height)
+    //draw bullets on canvas/gameArea
+    bulletController.draw(ctx)
     //drawing the knight instance with the draw method
     knight.draw(ctx)
 }

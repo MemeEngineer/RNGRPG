@@ -1,7 +1,8 @@
 export default class Hero{
-    constructor(x,y,health= ['💎'],damage,item =[]){
+    constructor(x,y, BulletController,health= ['💎'],damage,item =[]){
         this.x = x;
         this.y = y;
+        this.BulletController = BulletController
         this.width = 25;
         this.height = 25;
         this.speed = 4;
@@ -14,6 +15,7 @@ export default class Hero{
     }
 
     draw(ctx){
+        //calling the movement method
         this.move()
         //makes border color
         ctx.strokeStyle = "Yellow";
@@ -23,7 +25,21 @@ export default class Hero{
         ctx.fillStyle = 'black';
         //makes shape a rectange with x, y location & width and height
         ctx.fillRect(this.x,this.y,this.width,this.height);
+        //calling on the attack method
+        this.attack();
     }
+
+    attack(){
+        if(this.attackPressed){
+            const speed = 5;
+            const delay = 7;
+            const damage = 1;
+            const bulletX = this.x + this.width /2;
+            const bulletY = this.y;
+            this.BulletController.shoot(bulletX, bulletY, speed, damage, delay)
+        }
+    }
+
     move(){
         if(this.upPressed){
             this.y -= this.speed;
@@ -52,6 +68,9 @@ export default class Hero{
         if(e.key === "d"){
         this.rightPressed = true
         }
+        if(e.key === "h"){
+            this.attackPressed = true;
+        }
     }
     
     keyup = (e) => {
@@ -66,6 +85,9 @@ export default class Hero{
         }
         if(e.key === "d"){
         this.rightPressed = false
+        }
+        if(e.key === "h"){
+            this.attackPressed = false;
         }
     }
 }
