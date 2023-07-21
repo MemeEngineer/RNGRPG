@@ -17,4 +17,17 @@ export default class Bullet{
         //dimensional properties of the bullet
         ctx.fillRect(this.x,this.y, this.width, this.height)
     }
+
+    collideWith(mob){
+        if(
+            this.x < mob.x + mob.width &&
+            this.x + this.width > mob.x && 
+            this.y < mob.y + mob.height &&
+            this.y + this.height > mob.y 
+        ){
+            mob.takeDamage(this.damage);
+            return true
+        }
+        return false
+    }
 }

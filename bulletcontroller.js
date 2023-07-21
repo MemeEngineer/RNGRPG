@@ -29,6 +29,16 @@ export default class BulletController{
     })
 }
 
+collideWith(mob){
+    return this.bullets.some(bullet => {
+        if( bullet.collideWith(mob)){
+            this.bullets.splice(this.bullets.indexOf(bullet), 1);
+            return true
+        }
+        return false
+    })
+}
+
 //returns true/false if bullet Y position is less than the bullet height (- is because of the grid origin)
 isBulletOffScreen(bullet){
     return bullet.y <= -bullet.height

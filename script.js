@@ -1,5 +1,6 @@
 import Hero from "./hero.js"
 import BulletController from "./bulletcontroller.js";
+import Mob from './mob.js'
 
 // Selecting the Canvas element by id
 const gameArea = document.querySelector('#game-area')
@@ -15,6 +16,18 @@ const bulletController = new BulletController(gameArea);
 //instance of the hero
 const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController )
 
+const arrMob = [
+    new Mob( 250, 20, "yellow", 10),
+    new Mob(350, 20, "purple", 20)
+]
+// function spawnMob(){
+//     for(let i=0; i < 5; i++){
+//         const mobs = new Mob()
+//         arrMob.push(mobs)
+//     }
+// }
+
+
 function gameLoop(){
     //invoking the style properties of the hero with a function
     setCommonStyle()
@@ -26,6 +39,18 @@ function gameLoop(){
     bulletController.draw(ctx)
     //drawing the knight instance with the draw method
     knight.draw(ctx)
+    //mob spawn
+    arrMob.forEach((mob)=> {
+        if(bulletController.collideWith(mob)){
+            if(mob.health <= 0){
+                const index = arrMob.indexOf(mob);
+                arrMob.splice(index, 1)
+            }
+        }else{
+            mob.draw(ctx)
+        }
+    })
+
 }
 
 // using a windows interal method to call gameloop 60 times per second to fresh game
