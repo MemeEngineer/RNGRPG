@@ -17,7 +17,7 @@ export default class Bullet{
         //dimensional properties of the bullet
         ctx.fillRect(this.x,this.y, this.width, this.height)
     }
-
+//collision mechanic with bullet based on position on canvas
     collideWith(mob){
         if(
             this.x < mob.x + mob.width &&

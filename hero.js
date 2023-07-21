@@ -1,5 +1,5 @@
 export default class Hero{
-    constructor(x,y, BulletController,health= ['💎'],damage,item =[]){
+    constructor(x,y, BulletController,health= ['❤'],damage,item =[]){
         this.x = x;
         this.y = y;
         this.BulletController = BulletController
@@ -33,10 +33,10 @@ export default class Hero{
         if(this.attackPressed){
             const speed = 5;
             const delay = 7;
-            const damage = 1;
+            this.damage = 1;
             const bulletX = this.x + this.width /2;
             const bulletY = this.y;
-            this.BulletController.shoot(bulletX, bulletY, speed, damage, delay)
+            this.BulletController.shoot(bulletX, bulletY, speed, this.damage, delay)
         }
     }
 

@@ -17,8 +17,8 @@ const bulletController = new BulletController(gameArea);
 const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController )
 
 const arrMob = [
-    new Mob( 250, 20, "yellow", 10),
-    new Mob(350, 20, "purple", 20)
+    new Mob( 250, 20, "yellow"),
+    new Mob(350, 20, "purple")
 ]
 // function spawnMob(){
 //     for(let i=0; i < 5; i++){
