@@ -1,3 +1,5 @@
+import Hero from "./hero.js";
+
 export default class Mob{
     
     constructor(x,y,color,health=['♥','♥','♥','♥']){
@@ -27,6 +29,18 @@ export default class Mob{
 
     takeDamage(damage){
         this.health.pop()
+    }
+    collideWithHero(knight){
+        if(
+            this.x < knight.x + knight.width &&
+            this.x + this.width > knight.x && 
+            this.y < knight.y + knight.height &&
+            this.y + this.height > knight.y 
+        ){
+            knight.takeDamage();
+            return true
+        }
+        return false
     }
     // HealthBar(){
        

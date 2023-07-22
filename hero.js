@@ -49,7 +49,7 @@ export default class Hero{
         }
     }
 
-    takeDamge(){
+    takeDamage(){
         this.health.pop()
     }
 

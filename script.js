@@ -14,7 +14,7 @@ gameArea.height = 600;
 //instance of the bulletcontroller
 const bulletController = new BulletController(gameArea);
 //instance of the hero
-const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController )
+const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController, ['❤','❤','❤'] )
 
 const arrMob = [
     new Mob( 250, 20, "yellow"),
@@ -42,7 +42,7 @@ function gameLoop(){
     //mob spawn
     arrMob.forEach((mob)=> {
         if(bulletController.collideWith(mob)){
-            if(mob.health <= 0){
+            if(mob.health.length <= 0){
                 const index = arrMob.indexOf(mob);
                 arrMob.splice(index, 1)
             }
@@ -50,6 +50,15 @@ function gameLoop(){
             mob.draw(ctx)
         }
     })
+    arrMob.forEach((mob)=> {
+        if(mob.collideWithHero(knight)){
+                console.log('Game over')
+                knight.takeDamage();
+        }else{
+            knight.draw(ctx)
+        }
+    })
+    
 
 }
 
@@ -63,6 +72,7 @@ function setCommonStyle(){
     ctx.lineJoin = `bevel`;
     ctx.lineWidth= 10;
 }
+
 
 // const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
 // console.log(Johnny.attack())

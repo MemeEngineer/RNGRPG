@@ -39,6 +39,7 @@ collideWith(mob){
     })
 }
 
+
 //returns true/false if bullet Y position is less than the bullet height (- is because of the grid origin)
 isBulletOffScreen(bullet){
     return bullet.y <= -bullet.height
