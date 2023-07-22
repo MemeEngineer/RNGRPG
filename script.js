@@ -1,16 +1,17 @@
 import Hero from "./hero.js"
 import BulletController from "./bulletcontroller.js";
 import Mob from './mob.js'
+import { Diamond } from "./item.js";
 
 // Selecting the Canvas element by id
 const gameArea = document.querySelector('#game-area')
 //initializing the canvas element with a 2d property
 const ctx = gameArea.getContext('2d');
-console.log(gameArea)
 // width and height properties
 gameArea.width = 550;
 gameArea.height = 600;
-
+//diamond is an item
+const diamond = new Diamond(10, ['💎'])
 //instance of the bulletcontroller
 const bulletController = new BulletController(gameArea);
 //instance of the hero
@@ -45,6 +46,12 @@ function gameLoop(){
             if(mob.health.length <= 0){
                 const index = arrMob.indexOf(mob);
                 arrMob.splice(index, 1)
+                let num = Math.floor(Math.random()* 11)
+                if(num === diamond.itemid){
+                    console.log(num)
+                    knight.item.push(diamond.item)
+                    console.log(knight)
+                }
             }
         }else{
             mob.draw(ctx)
@@ -58,7 +65,7 @@ function gameLoop(){
             knight.draw(ctx)
         }
     })
-    
+   
 
 }
 

@@ -27,9 +27,10 @@ export default class Mob{
         )
     }
 
-    takeDamage(damage){
+    takeDamage(){
         this.health.pop()
     }
+    //collision mechanic with player/hero
     collideWithHero(knight){
         if(
             this.x < knight.x + knight.width &&

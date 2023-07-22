@@ -5,7 +5,7 @@ export default class Hero{
         this.BulletController = BulletController
         this.width = 25;
         this.height = 25;
-        this.speed = 4;
+        this.speed = 3;
         this.health = health;
         this.damage = damage;
         this.item = item;
@@ -40,7 +40,7 @@ export default class Hero{
 
     attack(){
         if(this.attackPressed){
-            const speed = 5;
+            const speed = 3;
             const delay = 7;
             this.damage = 1;
             const bulletX = this.x + this.width /2;

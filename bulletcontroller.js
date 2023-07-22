@@ -28,7 +28,7 @@ export default class BulletController{
         bullet.draw(ctx)
     })
 }
-
+//if one bullet hits a mob remove the bullet from array
 collideWith(mob){
     return this.bullets.some(bullet => {
         if( bullet.collideWith(mob)){
