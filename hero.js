@@ -1,5 +1,5 @@
 export default class Hero{
-    constructor(x,y, BulletController,health= ['❤'],damage,item =[]){
+    constructor(x,y, BulletController,health= ['❤','❤','❤'],damage,item =[]){
         this.x = x;
         this.y = y;
         this.BulletController = BulletController
@@ -18,13 +18,22 @@ export default class Hero{
         //calling the movement method
         this.move()
         //makes border color
-        ctx.strokeStyle = "Yellow";
+        ctx.strokeStyle = "yellow";
         //makes border around shape
         ctx.strokeRect(this.x,this.y,this.width,this.height);
         //fills in shape color
         ctx.fillStyle = 'black';
         //makes shape a rectange with x, y location & width and height
         ctx.fillRect(this.x,this.y,this.width,this.height);
+        //health properties
+        ctx.fillStyle = 'red';
+        ctx.font = "15px arial";
+        ctx.fillText(
+            this.health,
+            this.x - (this.width / 2),
+            this.y + this.height / .6
+        )
+
         //calling on the attack method
         this.attack();
     }
@@ -38,6 +47,10 @@ export default class Hero{
             const bulletY = this.y;
             this.BulletController.shoot(bulletX, bulletY, speed, this.damage, delay)
         }
+    }
+
+    takeDamge(){
+        this.health.pop()
     }
 
     move(){
