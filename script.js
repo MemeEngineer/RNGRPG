@@ -21,12 +21,12 @@ const arrMob = [
     new Mob( 250, 20, "yellow"),
     new Mob(350, 20, "purple")
 ]
-// function spawnMob(){
-//     for(let i=0; i < 5; i++){
-//         const mobs = new Mob()
-//         arrMob.push(mobs)
-//     }
-// }
+function spawnMob(){
+    while( arrMob.length <= 0){
+        const mobs = new Mob(250,20)
+        arrMob.push(mobs)
+    }
+}
 
 
 function gameLoop(){
@@ -47,6 +47,7 @@ function gameLoop(){
             if(mob.health.length <= 0){
                 const index = arrMob.indexOf(mob);
                 arrMob.splice(index, 1)
+                spawnMob()
                 let num = Math.floor(Math.random() * (11 - 0) + 0 )
                 if(num === diamond.itemid){
                     console.log(num)
@@ -68,7 +69,7 @@ function gameLoop(){
         }
     })
    
-    
+
     
 }
 
@@ -83,6 +84,7 @@ function setCommonStyle(){
     ctx.lineWidth= 10;
 }
 
+//game win/lose conditions
 const gameCondition = {
     checkWin(){
         if(knight.item[0] == '💎'){
