@@ -10,8 +10,10 @@ const ctx = gameArea.getContext('2d');
 // width and height properties
 gameArea.width = 550;
 gameArea.height = 600;
+
 //diamond is an item
 const diamond = new Diamond(10, ['💎'])
+
 //instance of the bulletcontroller
 const bulletController = new BulletController(gameArea);
 //instance of the hero
@@ -19,12 +21,20 @@ const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletControll
 
 const arrMob = [
     new Mob( 250, 20, "yellow"),
-    new Mob(350, 20, "purple")
+    new Mob(350, 20, "purple"),
+    new Mob(150, 20, "Red"),
+    new Mob(50, 20, "blue"),
+    new Mob(450, 20, "green")
 ]
 function spawnMob(){
     while( arrMob.length <= 0){
-        const mobs = new Mob(250,20)
-        arrMob.push(mobs)
+        const mobs1 =  new Mob( 250, 20, "yellow")
+        const mobs2 =  new Mob(350, 20, "purple")
+        const mobs3 =  new Mob(150, 20, "Red")
+        const mobs4 =  new Mob(50, 20, "blue")
+        const mobs5 =  new Mob(450, 20, "green")
+        arrMob.push(mobs1, mobs2, mobs3, mobs4, mobs5)
+
     }
 }
 

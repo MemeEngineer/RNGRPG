@@ -5,7 +5,7 @@ export default class Hero{
         this.BulletController = BulletController
         this.width = 25;
         this.height = 25;
-        this.speed = 4;
+        this.speed = 3;
         this.health = health;
         this.damage = damage;
         this.item = item;
