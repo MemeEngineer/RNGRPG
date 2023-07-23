@@ -30,7 +30,7 @@ const arrMob = [
 
 
 function gameLoop(){
-    gameCondition.checkWin()
+    
     //invoking the style properties of the hero with a function
     setCommonStyle()
     //setting canvas color to gray
@@ -52,7 +52,7 @@ function gameLoop(){
                     console.log(num)
                     knight.item.push(diamond.item)
                     console.log(knight)
-                    // gameCondition.checkWin()
+                    gameCondition.checkWin()
                 }
             }
         }else{
