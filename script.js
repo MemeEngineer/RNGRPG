@@ -30,6 +30,7 @@ const arrMob = [
 
 
 function gameLoop(){
+    gameCondition.checkWin()
     //invoking the style properties of the hero with a function
     setCommonStyle()
     //setting canvas color to gray
@@ -46,11 +47,12 @@ function gameLoop(){
             if(mob.health.length <= 0){
                 const index = arrMob.indexOf(mob);
                 arrMob.splice(index, 1)
-                let num = Math.floor(Math.random()* 11)
+                let num = Math.floor(Math.random() * (11 - 0) + 0 )
                 if(num === diamond.itemid){
                     console.log(num)
                     knight.item.push(diamond.item)
                     console.log(knight)
+                    // gameCondition.checkWin()
                 }
             }
         }else{
@@ -66,7 +68,8 @@ function gameLoop(){
         }
     })
    
-
+    
+    
 }
 
 // using a windows interal method to call gameloop 60 times per second to fresh game
@@ -80,6 +83,17 @@ function setCommonStyle(){
     ctx.lineWidth= 10;
 }
 
+const gameCondition = {
+    checkWin(){
+        if(knight.item[0] == '💎'){
+            console.log('You have Won')
+        }
+
+        if(knight.health.length <= 0){
+            console.log('You have lost')
+        }
+    }
+}
 
 // const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
 // console.log(Johnny.attack())
