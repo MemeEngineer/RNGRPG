@@ -6,12 +6,9 @@ body{
      padding:0;
      margin:0;
      height:100vh;
-     background: linear-gradient(
-        0deg,
-        rgb(17,51,161) 0%, 
-        rgb(123,34,195)40%,
-        rgb(200,200,255) 60%
-     );
+     background-image: url(dungeon.avif);
+     background-size: cover;
+     
      
 }
 
@@ -31,6 +28,10 @@ h2{
     display:flex;
 
 } 
+img{
+    height:25vh;
+    width: 100%;
+}
 /* canvas{
     background-color: gray;
     width: 75%;
