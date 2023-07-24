@@ -1,5 +1,6 @@
 #RNGRPG
-![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/8987d7fb-0943-4a25-ac39-53530c41f813)
+
+![RNGRPG](https://github.com/MemeEngineer/RNGRPG/assets/90629466/f0b6236d-5fb9-49f9-827c-4e49ba188078)
 
 A simple WASD key and "H" button game. Shoot the mobs infront of you. The RNG is at 1/10. The game is simple: kill the enemies and find the Gem of Swag. The lower the kill count the better.
 
