@@ -11,6 +11,13 @@ A simple WASD key and "H" button game. Shoot the mobs infront of you. The RNG is
 #Motivation
 This game was created for my love of MMORPGs. Inspired by games with drop rates and rare items. RNG based games have always intrigued me because people love a good grind to find items that would boosts the character stats. This is a short homage, to games that give us that dopamine when trying to find rare items for your character.
 
+#Wireframe
+![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/16fb3c07-2351-431e-a07a-50514917c46a)
+
+Live ScreenShot
+![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/564835ce-f183-4bb5-b539-82682badef4a)
+
+
 
 #Technology
 JavaScript
