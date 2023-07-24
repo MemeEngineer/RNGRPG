@@ -1,6 +1,11 @@
 #RNGRPG
-<br>
+![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/8987d7fb-0943-4a25-ac39-53530c41f813)
+
 A simple WASD key and "H" button game. Shoot the mobs infront of you. The RNG is at 1/10. The game is simple: kill the enemies and find the Gem of Swag. The lower the kill count the better.
+
+![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/d976107e-ff36-46f3-8b5f-63d2c08d9150)
+
+![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/e2afc6d8-5d2b-4d61-8175-53a9bc94cc31)
 
 #Motivation
 This game was created for my love of MMORPGs. Inspired by games with drop rates and rare items. RNG based games have always intrigued me because people love a good grind to find items that would boosts the character stats. This is a short homage, to games that give us that dopamine when trying to find rare items for your character.
