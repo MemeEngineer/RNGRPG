@@ -7,6 +7,17 @@ import { Diamond } from "./item.js";
 const gameArea = document.querySelector('#game-area')
 //initializing the canvas element with a 2d property
 const ctx = gameArea.getContext('2d');
+//inventory slot
+const gameItem = document.querySelector('#item')
+
+//Health bar
+const healthbar = document.querySelector('#health')
+
+//kill count
+const killCount = document.querySelector('#kill-count')
+console.log(killCount)
+let kill = 0;
+
 // width and height properties
 gameArea.width = 550;
 gameArea.height = 600;
@@ -51,6 +62,7 @@ function gameLoop(){
     bulletController.draw(ctx)
     //drawing the knight instance with the draw method
     knight.draw(ctx)
+    health.innerText = knight.health
     //mob spawn
     arrMob.forEach((mob)=> {
         if(bulletController.collideWith(mob)){
@@ -58,11 +70,12 @@ function gameLoop(){
                 const index = arrMob.indexOf(mob);
                 arrMob.splice(index, 1)
                 spawnMob()
+                kill++
+                killCount.innerText = kill
                 let num = Math.floor(Math.random() * (11 - 0) + 0 )
                 if(num === diamond.itemid){
-                    console.log(num)
                     knight.item.push(diamond.item)
-                    console.log(knight)
+                    gameItem.innerText = knight.item
                     gameCondition.checkWin()
                 }
             }
@@ -79,6 +92,7 @@ function gameLoop(){
         }
     })
    
+    
 
     
 }
@@ -106,6 +120,12 @@ const gameCondition = {
         }
     }
 }
+//restart button
+const restart = document.querySelector('#restart')
+
+restart.addEventListener('click', function(){
+    window.location.reload()
+})
 
 // const Johnny = new Hero(['💎', '💎','💎','💎','💎'], 5, [],1,1,"red", 1,1)
 // console.log(Johnny.attack())

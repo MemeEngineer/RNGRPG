@@ -12,18 +12,6 @@ body{
      
 }
 
-h1{
-    margin: 0px;
-    font-size: 2.9em;
-    color: yellow;
-}
-h2{
-    margin:0px;
-    margin-bottom: 5px;
-    font-size: 2em;
-    color:yellow;
-    font-style: italic;
-}
  #canvas-container{
     display:flex;
 
@@ -32,6 +20,23 @@ img{
     height:25vh;
     width: 100%;
 }
+/* 
+table#inventory{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: beige;
+} */
+
+table, th, td {
+    border: 10px gray solid;
+    background-color: beige;
+    display:flex;
+    justify-content: center;
+  }
+  td#health{
+    color: red
+  }
 /* canvas{
     background-color: gray;
     width: 75%;
