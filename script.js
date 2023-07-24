@@ -15,7 +15,6 @@ const healthbar = document.querySelector('#health')
 
 //kill count
 const killCount = document.querySelector('#kill-count')
-console.log(killCount)
 let kill = 0;
 
 // width and height properties
@@ -31,7 +30,7 @@ const bulletController = new BulletController(gameArea);
 const knight = new Hero(gameArea.width/2.2, gameArea.height / 1.3,bulletController, ['❤','❤','❤'] )
 
 const arrMob = [
-    new Mob( 250, 20, "yellow"),
+    new Mob( 250, 20, "grey"),
     new Mob(350, 20, "purple"),
     new Mob(150, 20, "Red"),
     new Mob(50, 20, "blue"),
@@ -39,7 +38,7 @@ const arrMob = [
 ]
 function spawnMob(){
     while( arrMob.length <= 0){
-        const mobs1 =  new Mob( 250, 20, "yellow")
+        const mobs1 =  new Mob( 250, 20, "grey")
         const mobs2 =  new Mob(350, 20, "purple")
         const mobs3 =  new Mob(150, 20, "Red")
         const mobs4 =  new Mob(50, 20, "blue")
@@ -85,8 +84,10 @@ function gameLoop(){
     })
     arrMob.forEach((mob)=> {
         if(mob.collideWithHero(knight)){
-                console.log('Game over')
                 knight.takeDamage();
+                gameCondition.checkWin()
+                window.location.reload()
+                
         }else{
             knight.draw(ctx)
         }
@@ -102,8 +103,8 @@ setInterval(gameLoop, 1000 /60)
 
 //function with properties of the hero shape
 function setCommonStyle(){
-    ctx.shadowColor = '#d53';
-    ctx.shadowBlur = 10;
+    // ctx.shadowColor = '#d53';
+    // ctx.shadowBlur = 10;
     ctx.lineJoin = `bevel`;
     ctx.lineWidth= 10;
 }
@@ -112,11 +113,11 @@ function setCommonStyle(){
 const gameCondition = {
     checkWin(){
         if(knight.item[0] == '💎'){
-            console.log('You have Won')
+            alert('You found the Gem of Swag and have won the game!')
         }
 
         if(knight.health.length <= 0){
-            console.log('You have lost')
+           alert('You have lost, Please hit the Restart Button or Refresh Page')
         }
     }
 }

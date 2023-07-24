@@ -33,6 +33,7 @@ table, th, td {
     background-color: beige;
     display:flex;
     justify-content: center;
+    
   }
   td#health{
     color: red
