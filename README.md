@@ -7,7 +7,7 @@ _____________
 
 # About
 ______________
-A simple analog WASD key and "H" button game. The game is simple: kill the enemies and find the Gem of Swag 💎 (1/10 Drop Rate). The lower the kill count the better. Game design was based off of Space invaders and Pac-Man game development.
+A simple analog WASD and H key game. The game is simple: Defeat the enemies and find the Gem of Swag 💎 (1/10 Drop Rate). The lower the kill count the better. Game design was based off of Space invaders and Pac-Man game development.
 
 ![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/d976107e-ff36-46f3-8b5f-63d2c08d9150)
 
