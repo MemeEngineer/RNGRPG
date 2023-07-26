@@ -43,19 +43,19 @@ ______________________________________
 
 # Links Used
 _________________
-(Game Foundation)
+## (Game Foundation)
 - https://www.youtube.com/watch?v=i7FzA4NavDs
 
-(Future Use to build map collision)
+## (Future Use to build map collision)
 - https://www.youtube.com/watch?v=Tk48dQCdQ3E
 - https://www.youtube.com/watch?v=KsLChm2MIQY
 
-(2D collision Detection)
+## (2D collision Detection)
 - https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection#axis-aligned_bounding_box
   
-(Random Number Generation)
+## (Random Number Generation)
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   
-(Game movement)
+## (Game movement)
 - https://www.w3schools.com/graphics/game_movement.asp
 
