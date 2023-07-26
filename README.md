@@ -1,8 +1,7 @@
-# RNGRPG
+# RNGRPG (Random Number Generator Role-Playing Game)
 _____________
-# Live DEMO:
+# Live DEMO: https://memeengineer.github.io/RNGRPG/
 _____________
-https://memeengineer.github.io/RNGRPG/
 
 ![RNGRPG](https://github.com/MemeEngineer/RNGRPG/assets/90629466/f0b6236d-5fb9-49f9-827c-4e49ba188078)
 
