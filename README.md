@@ -29,7 +29,8 @@ _________________
 
 # Technology
 ______________
-![HTMLCSSJSicon](https://github.com/MemeEngineer/RNGRPG/assets/90629466/889657a7-e87b-443e-9236-7ba689e2189f)
+
+![HTMLCSSJS](https://github.com/MemeEngineer/RNGRPG/assets/90629466/7ce08ecb-c62b-4772-a7e6-647473cf1176)
 
 
 # Improvements / Future Implementations
@@ -44,13 +45,17 @@ ______________________________________
 _________________
 (Game Foundation)
 - https://www.youtube.com/watch?v=i7FzA4NavDs
+
 (Future Use to build map collision)
 - https://www.youtube.com/watch?v=Tk48dQCdQ3E
 - https://www.youtube.com/watch?v=KsLChm2MIQY
+
 (2D collision Detection)
 - https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection#axis-aligned_bounding_box
+  
 (Random Number Generation)
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+  
 (Game movement)
 - https://www.w3schools.com/graphics/game_movement.asp
 
