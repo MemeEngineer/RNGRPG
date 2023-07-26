@@ -7,7 +7,7 @@ _____________
 
 # About
 ______________
-A simple analog WASD key and "H" button game. The game is simple: kill the enemies and find the Gem of Swag 💎 (1/10 Drop Rate). The lower the kill count the better.
+A simple analog WASD key and "H" button game. The game is simple: kill the enemies and find the Gem of Swag 💎 (1/10 Drop Rate). The lower the kill count the better. Game design was based off of Space invaders and Pacman game development.
 
 ![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/d976107e-ff36-46f3-8b5f-63d2c08d9150)
 
@@ -19,7 +19,7 @@ This game was created for my love of MMORPGs. Inspired by games with drop rates 
 
 # Game Logic / Game Mechanic
 ______________
-Created with Object Oriented programming in mind. Each class/object has X & Y coordinates. The bullets/attack event happens at the players X & Y coordinate and is put into an array. If the Mob(Moveable Objects) / enemies are in the same X & Y coordinate as the bullets then the collision will trigger an class method to reduce the Mobs health. The game takes place in a canvas element in HTML <canvas/> allowing graphical and color elements to be drawn. The top left corner of the canvas element is the origin and the game is based off of those coordinate positions.
+Created with Object Oriented programming in mind. Each class/object has X & Y coordinates. The bullets/attack event happens at the players X & Y coordinate and is put into an array. If the Mob(Moveable Objects) / enemies are in the same X & Y coordinate as the bullets then the collision will trigger a class method to reduce the Mobs health. The game takes place in a canvas element in HTML <canvas/> allowing graphical and color elements to be drawn. The top left corner of the canvas element is the origin and the game is based off of those coordinate positions.
 
 # Wireframe
 _____________
@@ -40,7 +40,7 @@ ______________
 # Improvements / Future Implementations
 ______________________________________
 - Randomize mob movement (create mobs that move)
-- Fix lose condition to end when collision
+- Fix lose condition to end when collision and health reduction
 - Add more items to boost damage or add health
 - Add Pond to make a game within a game to obtain more items
 - Need to map out border to prevent player from going off screen
