@@ -17,6 +17,10 @@ A simple analog WASD key and "H" button game. The game is simple: kill the enemi
 ______________
 This game was created for my love of MMORPGs. Inspired by games with drop rates and rare items. RNG based games have always intrigued me because people love a good grind to find items that would boosts the character stats. This is a short homage, to games that give us that dopamine when trying to find rare items for your character.
 
+# Game Logic / Game Mechanic
+______________
+Created with Object Oriented programming in mind. Each class/object has X & Y coordinates. The bullets/attack event happens at the players X & Y coordinate and is put into an array. If the Mob(Moveable Objects) / enemies are in the same X & Y coordinate as the bullets then the collision will trigger an class method to reduce the Mobs health. The game takes place in a canvas element in HTML <canvas/> allowing graphical and color elements to be drawn. The top left corner of the canvas element is the origin and the game is based off of those coordinate positions.
+
 # Wireframe
 _____________
 ![image](https://github.com/MemeEngineer/RNGRPG/assets/90629466/16fb3c07-2351-431e-a07a-50514917c46a)
@@ -39,6 +43,7 @@ ______________________________________
 - Fix lose condition to end when collision
 - Add more items to boost damage or add health
 - Add Pond to make a game within a game to obtain more items
+- Need to map out border to prevent player from going off screen
 
 
 # Links Used
